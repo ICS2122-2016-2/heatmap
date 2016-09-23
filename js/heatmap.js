@@ -1,9 +1,11 @@
+/* global createjs, h337, DATAPOINTS */
+
 const N_AISLES  = 15;
 const TILE_SIZE = 10;
 const TILES_BETWEEN_SHELVES = 5;
 const AISLE_LABEL_FONT = "14px Arial";
 const AISLE_LABEL_COLOR = "#000000";
-const X_OFFSET = 0;
+//const X_OFFSET = 0;
 const Y_OFFSET = 1;
 const LARGE_SHELF_SIZE = 45;
 const SMALL_SHELF_SIZE = 40;
@@ -57,8 +59,6 @@ const heatmapInstance = h337.create({ container: document.getElementById("heatma
 
 var points = [];
 var max = 0;
-var width = 900;
-var height = 950;
 var re = /^\(([0-9]+), ([0-9]+)\)$/;
 var key, value, parsed, point;
 for(key in DATAPOINTS) {
@@ -66,8 +66,8 @@ for(key in DATAPOINTS) {
 		value = DATAPOINTS[key];
 		parsed = key.match(re);
 		point = {
-			x: parseInt(parsed[1]) * 10,
-			y: parseInt(parsed[2]) * 10,
+			x: parseInt(parsed[1]) * TILE_SIZE,
+			y: parseInt(parsed[2]) * TILE_SIZE,
 			value: value
 		};
 		max = Math.max(value, max);
@@ -75,8 +75,8 @@ for(key in DATAPOINTS) {
 	}
 }
 var data = { 
-  max: max, 
-  min: 0,
-  data: points 
+	max: max, 
+	min: 0,
+	data: points 
 };
 heatmapInstance.setData(data);
