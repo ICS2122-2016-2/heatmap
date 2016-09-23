@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ICS2122 - Grupo 8: Heatmap</title>
+
+		<!-- CSSs -->
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/heatmap.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>ICS2122 <small>Grupo 8 - Heatmap</small></h1>
+					<!-- TODO: narrower? -->
+					<p class="lead">
+						Visualización, mediante mapa de calor, del tránsito de
+						clientes en un supermercado. Esto nos permite identificar
+						de manera gráfica distribuciones de productos en góndolas
+						que nos permitan maximizar ciertos KPI de interés.
+					</p>
+				</div>
+			</div>
+		<!--</div>-->
+
+		<!--<div class="container-fluid">-->
+			<div class="row">
+				<!-- Sidebar wrapper -->
+				<!--<div class="col-md-2">-->
+					<!--<h2>Carga de archivo</h2>-->
+					<!--<form id="dataFileForm">-->
+						<!--<div class="form-group">-->
+							<!--<label for="dataFileInput">Archivo de datos</label>-->
+							<!--<input type="file" id="dataFileInput" />-->
+							<!--<p class="help-block">-->
+								<!--El objeto debe ser un objeto JSON dónde cada-->
+								<!--llave corresponde a una tupla de coordenadas y-->
+								<!--el valor de la llave representa la cantidad de-->
+								<!--tránsito en esa coordenada.-->
+							<!--</p>-->
+						<!--</div>-->
+						<!--<button id="submitButton" type="submit" class="btn btn-default">Cargar</button>-->
+					<!--</form>-->
+				<!--</div>-->
+
+				<!-- Heatmap wrapper -->
+				<div class="col-md-12">
+					<h2>Heatmap</h2>
+					<div id="canvasWrapper">
+						<div id="marketWrapper">
+							<canvas id="marketCanvas" width="900" height="950" />
+						</div>
+						<div id="heatmapWrapper">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/easeljs-0.8.2.min.js"></script>
+		<script src="./js/heatmap.min.js"></script> 
+		<script src="./maps/map_01.json"></script>
+		<script src="./js/heatmap.js"></script> 
+	</body>
+</html>
+

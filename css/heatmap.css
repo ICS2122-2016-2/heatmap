@@ -1,0 +1,14 @@
+#canvasWrapper {
+	position: relative;
+}
+
+#marketWrapper {
+	width: 900px;
+	height: 950px;
+	position: absolute;
+}
+
+#heatmapWrapper {
+	width: 900px;
+	height: 950px;
+}
