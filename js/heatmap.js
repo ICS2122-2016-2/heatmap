@@ -42,7 +42,7 @@ for(var i = 0; i < N_AISLES; i++) {
 	aisleLabel = new createjs.Text("P" + (i + 1), AISLE_LABEL_FONT, AISLE_LABEL_COLOR);
 	aisleLabel.x = leftLargeShelf.x + (TILES_BETWEEN_SHELVES / 2 - .4) * TILE_SIZE;
 
-	// Add the childs...
+	// Add the children...
 	stage.addChild(leftSmallShelf);
 	stage.addChild(rightSmallShelf);
 	stage.addChild(leftLargeShelf);
